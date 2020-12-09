@@ -36,7 +36,10 @@ class House
   end
 
   def details
-    House.new
+    details = {
+      "price" => @price,
+      "address" => @address
+    }
   end
 
 end

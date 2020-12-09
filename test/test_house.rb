@@ -56,11 +56,7 @@ class HouseTest < Minitest::Test
   def test_deatils
 
     house = House.new("$400000", "123 sugar lane")
-    room_1 = Room.new(:bedroom, 10, '13')
-    room_2 = Room.new(:bedroom, 11, '15')
-    house.add_room(room_1)
-    house.add_room(room_2)
 
-    assert_equal house.details, House.new
+    assert_equal house.details, {"price" => "$400000", "address" => "123 sugar lane"}
   end
 end
